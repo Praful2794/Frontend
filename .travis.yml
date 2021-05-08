@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t praful2794/node .
-  - docker images praful2794/node
+  - docker build -t praful2794/node2 .
+  - docker images praful2794/node2
 
 before_deploy:
   - docker login -u praful2794 -p Pass@4321
 
 deploy:
   provider: script
-  script: docker push praful2794/praful2794/node
+  script: docker push praful2794/node2
   on:
     branch: master
