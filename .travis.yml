@@ -1,7 +1,7 @@
 sudo: required
 services:
   - docker
-  
+
 script:
   - docker build -t praful2794/node1 .
   - docker images praful2794/node1
@@ -12,5 +12,5 @@ before_deploy:
 deploy:
   provider: script
   script: docker push praful2794/node1
-  one:
+  on:
     branch: master
